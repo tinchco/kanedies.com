@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Kane Dies',
+    siteUrl: 'https://kanedies.com',
   },
   plugins: [
   	'gatsby-plugin-robots-txt',
