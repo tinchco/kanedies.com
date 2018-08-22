@@ -1,11 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Kane Dies',
+    title: `Kane Dies`,
     siteUrl: 'https://kanedies.com',
+    description: `Always remember, at the end of the story, Kane dies.`,
+    image: `https://kanedies.com/meta.jpg`,
+    social: {
+      instagram: `https://www.instagram.com/kanedies/`,
+      facebook: `https://www.facebook.com/kanedies`,
+      twitter: `https://twitter.com/kanedies`
+    }
   },
   plugins: [
-  	'gatsby-plugin-robots-txt',
-  	'gatsby-plugin-react-helmet',
+  	`gatsby-plugin-robots-txt`,
+  	`gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -17,19 +24,40 @@ module.exports = {
       },
     },
 	  {
-	    resolve: `gatsby-plugin-manifest`,
+	    resolve: `gatsby-plugin-favicon`,
 	    options: {
-	      name: `Kane Dies`,
-	      short_name: `Kane Dies`,
-	      start_url: `/`,
-	      background_color: `#f7f0eb`,
-	      theme_color: `#ff3d00`,
-	      display: `minimal-ui`,
-	      icon: `src/images/icon.png`, // This path is relative to the root of the site.
-	    },
+	      logo: "./src/images/favicon.png",
+
+	      // WebApp Manifest Configuration
+	      appName: 'Gatsby site',
+	      appDescription: null,
+	      developerName: null,
+	      developerURL: null,
+	      dir: 'auto',
+	      lang: 'en-US',
+	      background: '#fff',
+	      theme_color: '#fff',
+	      display: 'standalone',
+	      orientation: 'any',
+	      start_url: '/?homescreen=1',
+	      version: '1.0',
+
+	      icons: {
+	        android: true,
+	        appleIcon: true,
+	        appleStartup: true,
+	        coast: false,
+	        favicons: true,
+	        firefox: true,
+	        opengraph: false,
+	        twitter: false,
+	        yandex: false,
+	        windows: false
+	      }
+	    }
 	  },
 	  {
-	    resolve: 'gatsby-plugin-mailchimp',
+	    resolve: `gatsby-plugin-mailchimp`,
 	    options: {
 	     	endpoint: 'https://kanedies.us19.list-manage.com/subscribe/post?u=a95882e0143c44caeee16681f&amp;id=ff54a0c7a5',
 	    },
