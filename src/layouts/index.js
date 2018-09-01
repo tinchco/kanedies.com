@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import metaImage from "../images/meta.jpg";
+import metaImage from "../assets/meta.jpg";
 
-import "./index.css";
+import "../css/app.css";
 
 const TemplateWrapper = ({ children }) => (
   <div className="flex flex-col font-sans min-h-screen text-black bg-primary">

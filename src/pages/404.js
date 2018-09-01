@@ -1,5 +1,5 @@
 import React from "react";
-import Taken from "../images/taken.svg";
+import Taken from "../assets/taken.svg";
 
 const NotFoundPage = () => (
   <div>
